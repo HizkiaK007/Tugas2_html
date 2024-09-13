@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>HTML 2</title>
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
+    <style>
+      h3 {
+        color: rgb(255, 252, 252);
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <h1 style="color: rgb(255, 0, 0)">Tape<span>Oto</span></h1>
+    </nav>
+
+    <div class="list">
+      <form>
+        <label for="car">Brand Mobil:</label>
+        <input
+          list="carBrands"
+          id="car"
+          name="car"
+          placeholder="ketik atau pilih mobil"
+          oninput="showCarImage()"
+        />
+
+        <datalist id="carBrands">
+          <option value="Mercedes"></option>
+          <option value="Lamborghini"></option>
+          <option value="Ferrari"></option>
+        </datalist>
+      </form>
+      <div
+        id="overlayy"
+        class="overlayy"
+        onclick="closeImage()"
+      ></div>
+
+      <div
+        id="image"
+        class="image"
+      >
+        <button
+          class="close-button"
+          onclick="closeImage()"
+        >
+          ×
+        </button>
+        <img
+          class="img"
+          id="carImage"
+          src=""
+          alt="Car Image"
+        />
+      </div>
+    </div>
+
+    <section>
+      <div class="mobil">
+        <h3>Mercedes</h3>
+        <h3>Lamborghini</h3>
+        <h3>Ferrari</h3>
+      </div>
+      <div class="wrap">
+        <a
+          href="#"
+          onclick="showArticle('mercedes'); return false;"
+        >
+          <div>
+            <img
+              src="mercedes.jpg"
+              alt="Mercedes"
+              id="mercedes-img"
+            />
+          </div>
+        </a>
+        <a
+          href="#"
+          onclick="showArticle('lamborghini'); return false;"
+        >
+          <div>
+            <img
+              src="l.jpg"
+              alt="Lamborghini"
+              id="lamborghini-img"
+            />
+          </div>
+        </a>
+        <a
+          href="#"
+          onclick="showArticle('ferrari'); return false;"
+        >
+          <div>
+            <img
+              src="ferrari.jpg"
+              alt="Ferrari"
+              id="ferrari-img"
+            />
+          </div>
+        </a>
+      </div>
+
+      <!-- Overlay untuk latar belakang saat artikel muncul -->
+      <div
+        class="overlay"
+        id="overlay"
+        onclick="hideArticle()"
+      >
+        <div
+          class="artikel"
+          id="mercedes"
+          onclick="event.stopPropagation()"
+        >
+          <button
+            class="close-button"
+            onclick="hideArticle()"
+          ></button>
+          <p>
+            Mercedes-Benz adalah produsen mobil mewah asal Jerman yang terkenal dengan inovasi teknologi, kualitas tinggi, dan kenyamanan. Didirikan pada tahun 1926, Mercedes-Benz merupakan bagian dari Daimler AG dan memproduksi berbagai
+            jenis kendaraan, termasuk sedan, SUV, truk, dan bus. Mobil-mobil Mercedes dikenal dengan fitur keselamatan canggih, desain elegan, dan performa handal. Beberapa model terkenal di antaranya adalah S-Class, E-Class, dan G-Class.
+            Mercedes-Benz juga menjadi pionir dalam pengembangan teknologi listrik dan ramah lingkungan, seperti seri EQ.
+          </p>
+        </div>
+
+        <div
+          class="artikel"
+          id="lamborghini"
+          onclick="event.stopPropagation()"
+        >
+          <button
+            class="close-button"
+            onclick="hideArticle()"
+          ></button>
+          <p>
+            Lamborghini adalah produsen mobil mewah asal Italia yang terkenal dengan mobil sport super cepat dan desainnya yang futuristik. Didirikan pada tahun 1963 oleh Ferruccio Lamborghini, perusahaan ini awalnya bertujuan untuk
+            menyaingi Ferrari dalam dunia otomotif. Mobil Lamborghini dikenal karena performanya yang luar biasa, mesin berkapasitas besar, dan gaya desain yang agresif. Beberapa model ikoniknya termasuk Lamborghini Aventador, Huracán, dan
+            Urus. Lamborghini adalah simbol kecepatan, kekuatan, dan kemewahan.
+          </p>
+        </div>
+
+        <div
+          class="artikel"
+          id="ferrari"
+          onclick="event.stopPropagation()"
+        >
+          <button
+            class="close-button"
+            onclick="hideArticle()"
+          ></button>
+          <p>
+            Ferrari adalah produsen mobil mewah dan sport asal Italia yang dikenal dengan performa tinggi dan desain yang sangat ikonik. Didirikan pada tahun 1939 oleh Enzo Ferrari, perusahaan ini awalnya fokus pada balap mobil sebelum
+            memproduksi mobil jalan raya. Ferrari terkenal karena mobil-mobilnya yang cepat dan berkelas, serta keberhasilan mereka di ajang balap Formula 1. Beberapa model terkenal dari Ferrari termasuk 488 GTB, F8 Tributo, dan LaFerrari.
+            Ferrari juga dikenal dengan warna merah khasnya, yang sering disebut "Rosso Ferrari."
+          </p>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+    <footer>
+      <h4>By @Hizkia Kodoati 2024</h4>
+    </footer>
+  </body>
+</html>
